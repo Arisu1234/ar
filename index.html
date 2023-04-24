@@ -80,10 +80,7 @@
 
     <a-scene>
       <a-assets timeout="30000">
-        <!-- Model source: https://sketchfab.com/3d-models/spinosaurus-2135501583704537907645bf723685e7
-             Model author: https://sketchfab.com/VapTor
-             Model license: CC Attribution -->
-        <a-asset-item id="spinosaurus" src="cm5310.gltf" response-type="arraybuffer"></a-asset-item>
+        <a-asset-item id="spinosaurus" src="h7464.gltf" response-type="arraybuffer"></a-asset-item>
       </a-assets>
       
       <a-camera position="0 1.2 0"></a-camera>
@@ -92,8 +89,8 @@
       <a-entity environment="preset: forest; lighting: none; shadow: none; lightPosition: 0 2.15 0"
                 hide-in-ar-mode></a-entity>
       
-      <a-entity id="dino" position="0 0 -2" scale="0.2 0.2 0.2">
-        <a-entity position="0 4 0" rotation="0 0 0"
+      <a-entity id="dino" position="0 0 -1" scale="0.5 0.5 0.5">
+        <a-entity position="0 2 0" rotation="0 0 0"
                   gltf-model="#spinosaurus"
                   animation-mixer
                   shadow="cast: true; receive: false"></a-entity>
@@ -110,7 +107,7 @@
                       shadowCameraTop: 5;"
                id="light"
                target="dino"
-               position="-5 3 1.5"></a-light>
+               position="0 5 3"></a-light>
 
       <!-- This shadow-receiving plane is only visible in AR mode. -->
       <a-plane height="15" width="15" position="0 0 -3" rotation="-90 0 0"
